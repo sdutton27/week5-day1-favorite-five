@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<div class="heading-title">
+    <h1>These are a few of my favorite things</h1>
+    <h6>Click an image below to learn my Favorite 5 items in that category.</h6>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="options">
+    <h3 class="buttons-subheading">Select a category:</h3>
+    {% for i in range(len) %}
+        {% if i % 2 == 0%}
+        <div class="buttons" onclick="window.location.href='/{{cat[i]}}'"><button type="button" class="btn btn-light"><img class="button-img" src="./static/img/{{cat[i]}}.png"><br><span>{{cat[i]}}<span></button></div>
+        {% else %}
+        <div class="buttons" onclick="window.location.href='/{{cat[i]}}'"><button type="button" class="btn btn-dark"><img class="button-img" src="./static/img/{{cat[i]}}.png"><br><span>{{cat[i]}}<span></button></div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock content%}

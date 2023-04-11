@@ -1,0 +1,187 @@
+footer {
+    width: 100%;
+    background-color: rgb(25, 29, 31);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+footer span {
+    font-size: 10px;
+    color:rgb(200, 227, 253);
+}
+
+/* the index page, makes this the default */
+.heading-title h1 {
+    color:rgb(200, 227, 253);
+    font-size: 100%h;
+}
+
+/* the heading on the artist page*/
+#artist-title {
+    color:rgb(244, 221, 148);
+    font-size: 100%h;
+}
+
+/* the heading on the food page*/
+#food-title {
+    color:rgb(44, 170, 107);
+    font-size: 100%h;
+}
+
+/* the heading on the tv show page*/
+#tv-show-title {
+    color:rgb(152, 115, 222);
+    font-size: 100%h;
+}
+
+/* the heading on the movie page*/
+#movie-title {
+    color:rgb(250, 46, 46);
+    font-size: 100%h;
+}
+
+/* the heading on the pokemon page*/
+#pokemon-title {
+    color:rgb(251, 255, 0);
+    font-size: 100%h;
+}
+
+
+.heading-title h6 {
+    color:rgb(200, 227, 253);
+    font-size: 2.5vw;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(24, 0, 87), rgb(4, 64, 59));
+}
+
+.container-fluid {
+    display: grid; 
+    width: 100vw;
+    height: 100vh;
+    padding:0;
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 12%h 56%h 19%h 3%h;   
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "navbar"
+      "heading-title"
+      "options"
+      "return-to-home"
+      "foot"; 
+}
+.navbar { 
+    grid-area: navbar; 
+    background-image:linear-gradient(to top left, rgb(209, 209, 209), rgb(121, 121, 121));
+    
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 20px;
+}
+
+.navbar-toggler {
+    width:35px;
+    height:30px;
+    padding:0px;
+    margin:0px;
+    position:right;
+}
+
+.navbar-toggler-icon{
+    width:27px;
+    height:27px;
+    padding:0px;
+    margin:0px;
+    position:relative;
+}
+
+.options {
+    height: 100%h;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.3fr 1.7fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "buttons-subheading buttons-subheading buttons-subheading buttons-subheading buttons-subheading"
+    "buttons buttons buttons buttons buttons"; 
+    grid-area: options; 
+}
+
+.buttons-subheading{
+    grid-column: span 5;
+    align-self:center;
+    justify-self: center;
+    color:rgb(200, 227, 253);
+    font-size:100%;
+}
+
+button{
+    display: inline-block;
+    height:100%;
+    width: 100%;
+    max-height:inherit;
+    padding:0;
+    text-align: center;
+    border-radius: 1vw;
+    align-content: center;
+}
+
+.btn-light:hover {
+    color: #000;
+    background-color: #fff9d7;
+    border-color: #fff9d7;
+}
+
+button img {
+    width: 100%;
+    height: 90%;
+}
+
+/* rewrites the above since names are longer*/
+.sidepage-button img {
+    width: 100%;
+    height: 75%;
+
+}
+
+button span{
+    font-weight: 100;
+    font-size:3vw;
+}
+
+.btn {
+    padding:0;
+}
+
+.foot { grid-area: foot;}
+
+.return-to-home { 
+    grid-area: return-to-home; 
+    text-align:center;
+    padding:20px;
+}
+
+.return-to-home a { 
+    color:rgb(200, 227, 253);
+    text-decoration: none;
+}
+
+.return-to-home a:hover { 
+    color:rgb(133, 185, 234);
+    text-decoration: none;
+}
+
+.heading-title { 
+    grid-area: heading-title; 
+    text-align:center;
+}
+
+.button-img {
+    object-fit: cover;
+}

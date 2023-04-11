@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<div class="heading-title">
+    <h1 id="pokemon-title">Pokemon</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="options">
+    <h3 class="buttons-subheading">These are my favorite Pokemon:</h3>
+    {% for i in range(len) %}
+        {% if i % 2 == 0%}
+        <div class="buttons sidepage-button" onclick="window.location.href='#'"><button type="button" class="btn btn-light"><img class="button-img" src="./static/img/{{pokemon[i]}}.png"><span>{{pokemon[i]}}<span></button></div>
+        {% else %}
+        <div class="buttons sidepage-button" onclick="window.location.href='#'"><button type="button" class="btn btn-dark"><img class="button-img" src="./static/img/{{pokemon[i]}}.png"><br><span>{{pokemon[i]}}<span></button></div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock content%}
+
+{% block return_to_home %}
+<div class="return-to-home">
+    <a href ="/">Return to home page</a>
+</div>
+{% endblock %}
